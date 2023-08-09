@@ -36,43 +36,125 @@
 
         // Question 3: Palindrome Check Write a function that takes a string as input and returns true if it's a palindrome (reads the same forwards and backwards), false otherwise.
 
-        function checkPalindrom(inputstring){
-            let reverseStr= inputstring.split('').reverse().join('');
-            let straightRes=''
-            let reverseRes = ''
-            for(i=0;i<=inputstring.length;i++){
-                 straightRes += inputstring[i]
+        // function checkPalindrom(inputstring){
+        //     let reverseStr= inputstring.split('').reverse().join('');
+        //     let straightRes=''
+        //     let reverseRes = ''
+        //     for(i=0;i<=inputstring.length;i++){
+        //          straightRes += inputstring[i]
               
-            }
-            for(j=0;j<=reverseStr.length;j++){
-                reverseRes += reverseStr[j]
+        //     }
+        //     for(j=0;j<=reverseStr.length;j++){
+        //         reverseRes += reverseStr[j]
                 
-            }
+        //     }
 
-          if (straightRes===reverseRes){
-            console.log('true')
-          }else{
-            console.log('false')
-          }
+        //   if (straightRes===reverseRes){
+        //     console.log('true')
+        //   }else{
+        //     console.log('false')
+        //   }
 
-        }
-        checkPalindrom("level") 
+        // }
+        // checkPalindrom("level") 
 
         // anotherway optimized way to solve this problem.
 
-        const checkpalendrom =(inpStr)=>{
-           const revStr = inpStr.split('').reverse().join('')
-           if(inpStr===revStr){
-            console.log("true")
-           }else{
-            console.log("false")
-           }
+        // const checkpalendrom =(inpStr)=>{
+        //    const revStr = inpStr.split('').reverse().join('')
+        //    if(inpStr===revStr){
+        //     console.log("true")
+        //    }else{
+        //     console.log("false")
+        //    }
 
-        }
-        checkpalendrom("level")
+        // }
+        // checkpalendrom("level")
 
 
-        
+        // Question 4: Factorial Write a function that calculates the factorial of a given number. The factorial of a non-negative integer n is the product of all positive integers less than or equal to n.
+
+// function factorial(inpNum){
+//     let factorialOfNum=1;
+//       for(i=1; i<=inpNum; i++){
+//         factorialOfNum = factorialOfNum*i;
+//       }
+//       return factorialOfNum;
+// }  
+//     let num = 6;
+//     let res =factorial(num)
+//     console.log(`The factorial of  ${num} is ${res}`)
+
+
+//  Question 5: Find the Largest Number
+//  Write a function that takes an array of numbers as input and returns the largest number in the array.
+
+// const largestNum = (numarr) => {
+//     let sortedarr = numarr.sort((a,b)=>a-b);
+//     let  largestNumArr =[sortedarr.pop()]
+//     return largestNumArr;
+       
+// }
+
+// let array = [2,31,41,1,63,74,8,9,10,99]
+
+// console.log(largestNum(array));
+
+
+// Question 6: Find the Missing Number
+// Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
+
+// for finding one missing number.
+// const missingNum =(array) => {
+//     let n = array.length;
+//     let totalSum = (n*(n+1))/2;
+//     let sumofArray = array.reduce((a,b)=>a+b,0)
+//     return [totalSum-sumofArray]
+
+// }
+//  let Array = [0,1,2,3,4,5,6,8,9]
+//  console.log(missingNum(Array))
+
+// for finfing more than one missing num.
+// function findMissingNumbers(nums) {
+//     const numSet = new Set(nums);
+//     const missingNumbers = [];
+
+//     for (let i = 0; i <= nums.length; i++) {
+//         if (!numSet.has(i)) {
+//             missingNumbers.push(i);
+//         }
+//     }
+
+//     return missingNumbers;
+// }
+
+// const nums = [3, 0, 1, 4]; // Example array
+// console.log(findMissingNumbers(nums)); // Output: [2]
+
+
+
+//  Question 2: Remove Duplicates from an Array
+// Write a function that takes an array and returns a new array with duplicate elements removed.
+//  function RemoveDuplicate(arr){
+//      let uniqueArr = new  Set(arr)
+//      return uniqueArr;
+//  }
+//  let arrr = [2,43,5,6,6,6,7,8,99,98,99,7]
+//  console.log(RemoveDuplicate(arrr))
+
+// uestion 3: Find the Second Largest Element
+// Write a function that finds the second largest element in an array of integers.
+
+ const secondLarNum =(arr) => {
+     let sortedarr = arr.sort((a,b)=>b-a);
+     let maxTwo = sortedarr.splice(1,1)
+     return maxTwo;
+ }
+  
+ let numbers = [2,3,4,5,6,7,558,656,55]
+ console.log(secondLarNum(numbers));
+ 
 
     </script>
 </body>
