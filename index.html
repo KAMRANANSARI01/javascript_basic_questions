@@ -14,6 +14,20 @@
         //  }
         // console.log(reverseStr('kamran'))
 
+//         Question 1: Reverse a String
+// Write a function to reverse a given string without using built-in reverse() method.
+
+     
+        //  const revstring =  (str) => {
+        //   let revse = '';
+        //   for (let i=str.length-1; i>=0; i--){
+        //       revse += str[i];
+             
+        //   }
+        //   return revse;
+        //  }
+        // console.log(revstring("kamran"))
+
         // Question 2: FizzBuzz Write a program that prints the numbers from 1 to 100. But for multiples of three, print "Fizz" instead of the number, and for the multiples of five, print "Buzz". For numbers which are multiples of both three and five, print "FizzBuzz".
 
         // function FizzBuzz(){
@@ -134,7 +148,7 @@
 
 
 
-//  Question 2: Remove Duplicates from an Array
+//  Question 7: Remove Duplicates from an Array
 // Write a function that takes an array and returns a new array with duplicate elements removed.
 //  function RemoveDuplicate(arr){
 //      let uniqueArr = new  Set(arr)
@@ -143,18 +157,142 @@
 //  let arrr = [2,43,5,6,6,6,7,8,99,98,99,7]
 //  console.log(RemoveDuplicate(arrr))
 
-// uestion 3: Find the Second Largest Element
+// uestion 8: Find the Second Largest Element
 // Write a function that finds the second largest element in an array of integers.
 
- const secondLarNum =(arr) => {
-     let sortedarr = arr.sort((a,b)=>b-a);
-     let maxTwo = sortedarr.splice(1,1)
-     return maxTwo;
- }
+//  const secondLarNum =(arr) => {
+//      let sortedarr = arr.sort((a,b)=>b-a);
+//      let maxTwo = sortedarr.splice(1,1)
+//      return maxTwo;
+//  }
   
- let numbers = [2,3,4,5,6,7,558,656,55]
- console.log(secondLarNum(numbers));
+//  let numbers = [2,3,4,5,6,7,558,656,55]
+//  console.log(secondLarNum(numbers));
  
+// Question 9: create a Linked List
+// Implement a function to create a singly linked list.
+
+// firstly we will see that how to make a linklist ..
+// class ListNode {
+//     constructor(value) {
+//         this.value = value;
+//         this.next = null;
+//     }
+// }
+
+// // Creating nodes
+// const node1 = new ListNode(1);
+// const node2 = new ListNode(2);
+// const node3 = new ListNode(3);
+// const node4 = new ListNode(4);
+// const node5 = new ListNode(5);
+
+// // Connecting nodes to form a linked list
+// node1.next = node2;
+// node2.next = node3;
+// node3.next = node4;
+// node4.next = node5;
+
+// // Printing the linked list
+// let current = node1;
+// while (current !== null) {
+//     console.log(current.value);
+//     current = current.next;
+// }
+
+
+// Question 10: Reverse a Linked List
+// Implement a function to reverse a singly linked list.
+
+//  class ListNode {
+//     constructor(value){
+//         this.value = value;
+//         this.next = null;
+//     }
+//  }
+
+// //  revese a linklist
+
+//   function reverseLinkList(head){
+//     if(head===null || head.next === null){
+//         return head;
+//     }
+     
+//     const reversedHead = reverseLinkList(head.next);
+//         head.next.next = head;
+//         head.next = null;
+//         return reversedHead
+//   }
+
+//   // // Creating nodes
+// const node1 = new ListNode(1);
+// const node2 = new ListNode(2);
+// const node3 = new ListNode(3);
+// const node4 = new ListNode(4);
+// const node5 = new ListNode(5);
+
+// // // Connecting nodes to form a linked list
+// node1.next = node2;
+// node2.next = node3;
+// node3.next = node4;
+// node4.next = node5;
+
+// const reversedHead = reverseLinkList(node1)
+// let current = reversedHead;
+// while (current !== null) {
+//     console.log(current.value);
+//     current = current.next;
+// }
+
+// Question 11: Find the Maximum Subarray Sum
+// Given an array of integers, find the contiguous subarray with the largest sum.
+//   const maxSubarraySum = (nums)=>{
+//     let maxendinghere = nums[0]
+//     let maxsofar = nums[0]
+//     for (i=1;i<nums.length; i++){
+//         maxendinghere = Math.max(nums[i],maxendinghere+nums[i])
+//         maxsofar = Math.max(maxsofar,maxendinghere)
+//     }
+//     return maxsofar;
+//   }
+//   const nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]; // Example array
+// console.log(maxSubarraySum(nums)); // Output: 6
+
+// Question 12: Find the Longest Word
+// Write a function to find the longest word in a sentence. If there are multiple words with the same maximum length, return the first one.
+
+    //  const longestWord =(sentc)=>{
+    //     let words = sentc.split(' ')
+    //     let longest = ''
+    //     for(let i=0; i<words.length; i++){
+    //       if(words[i].length > longest.length){
+    //         longest = words[i]
+    //       }
+    //     }
+    //     return longest;
+    //  }
+    //  let sentence = 'Write a function to find the longest word in a sentence'
+    //  console.log(longestWord(sentence))
+
+//     Question 13: Counting Characters
+// Write a function that takes a string as input and returns an object containing the count of each character in the string.
+
+// function countCharacter(str){
+//       let charCount = {};
+//       for(let char of str){
+//         if(charCount[char]){
+//           charCount[char]++
+//         }else{
+//           charCount[char] = 1;
+//         }
+//       }
+//       return charCount;
+//       }
+
+// let string = 'kamranisagoodcoder'
+// console.log(countCharacter(string))
+
+
 
     </script>
 </body>
