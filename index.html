@@ -313,21 +313,44 @@
 
 // second method - it is optimal solution
 
-function sumOfTwoNum(array){
-    let targetSum = 6;
-    let numMap = {}
-    for (let i = 0; i<array.length; i++){
-        const complement = targetSum-array[i];
-        if(numMap[complement] !== undefined){
-            return [array[i],complement]
-        }
-         numMap[array[i]]=i;
-    }
-     return [];
-}
+// function sumOfTwoNum(array){
+//     let targetSum = 6;
+//     let numMap = {}
+//     for (let i = 0; i<array.length; i++){
+//         const complement = targetSum-array[i];
+//         if(numMap[complement] !== undefined){
+//             return [array[i],complement]
+//         }
+//          numMap[array[i]]=i;
+//     }
+//      return [];
+// }
 
-let array = [2,3,4,5,6,7,8]
-  console.log(sumOfTwoNum(array));
+// let array = [2,3,4,5,6,7,8]
+//   console.log(sumOfTwoNum(array));
+
+// write a function which can add any numbers
+
+//    function add(...num){
+//       let nums = [...num]
+//       let adding = nums.reduce((a,b)=>a+b)
+//       console.log (adding);
+//   }
+//  add(1,2,3,4,5,6,7,9,2,1)
+
+// another way
+
+// function add(...num) {
+//   let sum = 0;
+//   for (const n of num) {
+//     sum += n;
+//   }
+//   console.log(sum);
+// }
+
+// add(1, 2, 3, 4, 5, 6, 7, 9, 2, 1);
+
+
 
     </script>
 </body>
