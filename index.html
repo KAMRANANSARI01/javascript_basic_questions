@@ -351,6 +351,28 @@
 // add(1, 2, 3, 4, 5, 6, 7, 9, 2, 1);
 
 
+// Question: Implement a Debounce Function:-
+// By using the debounced function, we ensure that the original function is not immediately called every time it's invoked. Instead, it waits for a specific delay after the last invocation before executing. This is useful for scenarios like auto-complete suggestions in search bars, where we don't want to send a request for every keystroke.
+
+let debounceingfunction =(callBackfunc,delay)=>{
+    let timer;
+    return (...arg)=>{
+        if(timer)clearTimeout(timer);
+
+        timer=setTimeout((...arg)=>{
+         callBackfunc(...arg)
+        },delay)
+    }
+    const getMyData =()=>{
+        console.log('i got my data')
+    }
+}
+
+const betterRUnfunciton = debounceingfunction(getMyData,1000)
+
+betterRUnfunciton()//it will call after the delay time.
+
+
 
     </script>
 </body>
